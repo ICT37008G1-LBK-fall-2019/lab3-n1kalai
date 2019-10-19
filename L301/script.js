@@ -1,13 +1,17 @@
 
-let str = 'საქართველოში გამოაქვეყნეს ,მარკეტინგი რომელიც შეიქმნა ვირუსი  სგან, ეს არის ცუდი ს ბრალი';
+let str = 'საქართველოში გამოაქვეყნეს , რომელიც შეიქმნა   სგან, ეს არის ცუდი ს ბრალი';
 document.querySelector('p').textContent = str;
 let myArr = ['რეკლამა','ვირუსი','მარკეტინგი']
+let dontsay = [];
                 for (var i = 0; i < myArr.length; i++) {
                     if(str.indexOf(myArr[i]) != -1) {
-
-                        alert('თქვენ იყენებთ აკრძალულ სიტყვებს: ' +myArr[i]);
+                        dontsay.push(myArr[i])
                     } else {
                         continue;
                 }
             }
-        
+ if(dontsay.length > 0) {
+     alert('tqven iyenebt cud sityvebs: ' + dontsay);
+ } else {
+     alert('its okay')
+ }
